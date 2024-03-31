@@ -819,6 +819,11 @@ require('lazy').setup({
     config = function(_, opts)
       -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
 
+      -- configure clang for treesitter: I had to install llvm (clang) with ```winget install llvm``` and then add the line below.
+      -- Next I had to do this: ```:TSUpdate```, ```:TSInstall cpp``` or ```:TSInstall lua```.
+      -- Last I had to add the following line:
+      require('nvim-treesitter.install').compilers = { "clang" }
+
       ---@diagnostic disable-next-line: missing-fields
       require('nvim-treesitter.configs').setup(opts)
 
