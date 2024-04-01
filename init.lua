@@ -543,8 +543,20 @@ require('lazy').setup({
       local servers = {
         -- clangd = {},
         -- gopls = {},
-        -- pyright = {},
-        -- rust_analyzer = {},
+        pyright = {},
+        rust_analyzer = {},
+        tsserver = {},
+        omnisharp = {},
+        powershell_es = {},
+        markdown_oxide = {},
+        html = {},
+        docker_compose_language_service = {},
+        dockerls = {},
+        jsonls = {},
+        cssls = {},
+        emmet_language_server = {},
+        eslint = {},
+        intelephense = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
         -- Some languages (like typescript) have entire language plugins that can be useful:
