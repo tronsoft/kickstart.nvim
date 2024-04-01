@@ -804,7 +804,7 @@ require('lazy').setup({
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
     opts = {
-      ensure_installed = { 'bash', 'c', 'html', 'lua', 'luadoc', 'markdown', 'vim', 'vimdoc' },
+      ensure_installed = { 'bash', 'c', 'html', 'lua', 'luadoc', 'markdown', 'vim', 'vimdoc', 'c_sharp', 'json', 'typescript', 'php', 'python', 'css', 'javascript', 'cpp', 'yaml', 'rust' },
       -- Autoinstall languages that are not installed
       auto_install = true,
       highlight = {
@@ -822,7 +822,8 @@ require('lazy').setup({
       -- configure clang for treesitter: I had to install llvm (clang) with ```winget install llvm``` and then add the line below.
       -- Next I had to do this: ```:TSUpdate```, ```:TSInstall cpp``` or ```:TSInstall lua```.
       -- Last I had to add the following line:
-      require('nvim-treesitter.install').compilers = { "clang" }
+--      require('nvim-treesitter.install').compilers = { "clang" }
+      require('nvim-treesitter.install').compilers = { "zig" }
 
       ---@diagnostic disable-next-line: missing-fields
       require('nvim-treesitter.configs').setup(opts)
@@ -854,7 +855,7 @@ require('lazy').setup({
   --
   --  Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
   --    For additional information, see `:help lazy.nvim-lazy.nvim-structuring-your-plugins`
-  -- { import = 'custom.plugins' },
+  { import = 'custom.plugins' },
 }, {
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the
