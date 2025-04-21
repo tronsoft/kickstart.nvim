@@ -8,7 +8,7 @@ return {
       library = {
         -- Load luvit types when the `vim.uv` word is found
         { path = 'luvit-meta/library', words = { 'vim%.uv' } },
-      },
+      }
     },
   },
   { 'Bilal2453/luvit-meta', lazy = true },
@@ -151,7 +151,7 @@ return {
         -- clangd = {},
         gopls = {},
         pyright = {},
-        rust_analyzer = {},
+        --rust_analyzer = { enabled = false },
 --        tsserver = {},
         omnisharp = {},
         powershell_es = {},
@@ -204,7 +204,7 @@ return {
         'stylua', -- Used to format Lua code
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
-
+      
       require('mason-lspconfig').setup {
         handlers = {
           function(server_name)
@@ -215,8 +215,10 @@ return {
             server.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {})
             require('lspconfig')[server_name].setup(server)
           end,
+          rust_analyzer = function() end,
         },
       }
+
     end,
   },
 }
