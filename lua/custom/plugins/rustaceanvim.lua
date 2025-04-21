@@ -2,6 +2,11 @@ return {
   'mrcjkb/rustaceanvim',
   version = '^6', -- Recommended
   lazy = false, -- This plugin is already lazy
+  ["rust-analyzer"] = {
+    cargo = {
+      all_features = true,
+    },
+  },
   config = function()
     vim.g.rustaceanvim = function()
       -- Update this path
