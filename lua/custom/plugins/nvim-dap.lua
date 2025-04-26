@@ -120,6 +120,12 @@ return {
           disconnect = '⏏',
         },
       },
+      element_mappings = {
+        scopes = { map = { 'o', '<CR>' } },
+        breakpoints = { map = { 'o', '<CR>' } },
+        stack_frames = { map = { 'o', '<CR>' } },
+        variables = { map = { 'o', '<CR>' } },
+      },
     }
 
     -- Change breakpoint icons
